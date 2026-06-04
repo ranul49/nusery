@@ -1,0 +1,78 @@
+﻿To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:processDebugGoogleServices UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+
+> Task :app:compileDebugJavaWithJavac
+.\gradlew.bat : C:\Users\ranso\New folder\NurseryMonitor\app\src\main\java\com\
+futa\nurserymonitor\ui\dashboard\AlertLogAdapter.java:45: error: incompatible 
+types: possible lossy conversion from long to int
+At line:1 char:48
++ ... NurseryMonitor'; .\gradlew.bat assembleDebug --no-daemon 2>&1 | Tee-O ...
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\ranso\...rom long to int 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    private int expandedPosition = RecyclerView.NO_ID;
+                                               ^
+C:\Users\ranso\New folder\NurseryMonitor\app\src\main\java\com\futa\nurserymoni
+tor\ui\dashboard\AlertLogAdapter.java:141: error: incompatible types: possible 
+lossy conversion from long to int
+            expandedPosition = isExpanded ? RecyclerView.NO_ID : position;
+                                          ^
+2 errors
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/ranso/New%20folder/NurseryMonitor/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac' (registered by 
+plugin 'com.android.internal.application').
+> Compilation failed; see the compiler output below.
+  C:\Users\ranso\New folder\NurseryMonitor\app\src\main\java\com\futa\nurserymo
+nitor\ui\dashboard\AlertLogAdapter.java:45: error: incompatible types: 
+possible lossy conversion from long to int
+      private int expandedPosition = RecyclerView.NO_ID;
+                                                 ^
+  C:\Users\ranso\New folder\NurseryMonitor\app\src\main\java\com\futa\nurserymo
+nitor\ui\dashboard\AlertLogAdapter.java:141: error: incompatible types: 
+possible lossy conversion from long to int
+              expandedPosition = isExpanded ? RecyclerView.NO_ID : position;
+                                            ^
+  2 errors
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by 
+Develocity).
+
+18 actionable tasks: 1 executed, 17 up-to-date
+BUILD FAILED in 32s

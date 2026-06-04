@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/surface_card"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Row 1: Badge + Timestamp -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_event_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_status_pill"
+            android:text="BREACH" />
+
+        <TextView
+            android:id="@+id/tv_event_ts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:textColor="@color/text_disabled"
+            android:minWidth="48dp" />
+    </LinearLayout>
+
+    <!-- Row 2: Sensor values -->
+    <TextView
+        android:id="@+id/tv_event_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="6dp" />
+
+    <!-- Row 3: Actuator state -->
+    <TextView
+        android:id="@+id/tv_event_actuators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="2dp" />
+
+    <!-- Tamper flag (GONE unless flagged) -->
+    <TextView
+        android:id="@+id/tv_tamper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tamper_flag"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/status_approach"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ================================================================
+         Brand colours
+         ================================================================ -->
+    <color name="brand_primary">#1F3864</color>
+    <color name="brand_accent">#2E75B6</color>
+    <color name="brand_primary_light">#2E4D8A</color>
+
+    <!-- ================================================================
+         Status colours (WCAG 2.1 AA compliant on dark backgrounds)
+         ================================================================ -->
+    <color name="status_nominal">#22C55E</color>
+    <color name="status_approach">#F59E0B</color>
+    <color name="status_breach">#EF4444</color>
+
+    <!-- Tinted card borders -->
+    <color name="status_nominal_tint">#1A22C55E</color>
+    <color name="status_approach_tint">#33F59E0B</color>
+    <color name="status_breach_tint">#33EF4444</color>
+
+    <!-- ================================================================
+         Dark-mode surface colours (default theme)
+         ================================================================ -->
+    <color name="surface_dark">#1E293B</color>
+    <color name="surface_card">#263448</color>
+    <color name="surface_card_elevated">#2D3D52</color>
+    <color name="surface_overlay">#80000000</color>
+
+    <!-- ================================================================
+         Text colours
+         ================================================================ -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#B3FFFFFF</color>
+    <color name="text_disabled">#66FFFFFF</color>
+    <color name="text_on_dark_primary">#FF1E293B</color>
+
+    <!-- ================================================================
+         Icon / divider
+         ================================================================ -->
+    <color name="icon_tint">#B3FFFFFF</color>
+    <color name="divider">#1FFFFFFF</color>
+
+    <!-- ================================================================
+         Sensor error state
+         ================================================================ -->
+    <color name="sensor_error">#9E9E9E</color>
+    <color name="sensor_error_tint">#339E9E9E</color>
+
+    <!-- ================================================================
+         BLE offline banner
+         ================================================================ -->
+    <color name="ble_banner_bg">#331F3864</color>
+    <color name="ble_banner_border">#F59E0B</color>
+
+    <!-- ================================================================
+         Notification accent
+         ================================================================ -->
+    <color name="notification_color">#2E75B6</color>
+
+    <!-- ================================================================
+         Bottom nav
+         ================================================================ -->
+    <color name="nav_selected">#22C55E</color>
+    <color name="nav_unselected">#66FFFFFF</color>
+    <color name="nav_background">#1A2231</color>
+
+</resources>

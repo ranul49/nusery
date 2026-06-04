@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Font size options for Settings display spinner -->
+    <string-array name="font_sizes">
+        <item>Normal</item>
+        <item>Large</item>
+    </string-array>
+
+    <!--
+        Google Fonts provider certificate hashes for downloadable Roboto font.
+        MUST be in res/values/ (not res/xml/) so they can be referenced via @array/
+        from the font XML files in res/font/.
+
+        Source: https://developers.google.com/fonts/docs/android
+    -->
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYD
+            VQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5j
+            aXNjbzETMBEGA1UEChMKR29vZ2xlIEluYzEXMBUGA1UECxMOQ2xvdWQgUGxhdGZv
+            cm0xGjAYBgNVBAMTEXVwbG9hZC5haXBsYXRmb3JtLmNvbTAeFw0xMzAzMDcwNTA3
+            MjNaFw0yMzAzMDUwNTA3MjNaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
+            aWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzETMBEGA1UEChMKR29vZ2xl
+            IEluYzEXMBUGA1UECxMOQ2xvdWQgUGxhdGZvcm0xGjAYBgNVBAMTEXVwbG9hZC5h
+            aXBsYXRmb3JtLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKEz
+            NMFJPDEHhFaG+KUEIYUqOAdMVqfTHbJLKVBt0LQHJ7dUJEUslmiqPFhxNfKBrHu
+            Yl0XmVf3J5JDpWl7RwxCEiqj1ACLCB9PkZlW2L6s6JaY1tSCKcEm5bX3OfJNSmv
+            veG5h8FmIe4PfLF5OjO0CkYkbzCQm87r3Z8RHkCfF3OqcvJ8Hv5IfLGmVzUy5Zb
+            5oL5VNF3zG5F3S1N2tZ8Xu8OfNd3rJvXkOdkrEMg+C0oJp5AKnxnzmHkKqFNJ4k
+            QQCxkFnCjBXhUVJHVSV7m1z3kEXDN0zF0kFVh9k5r8p4DKDE2Gll3N1EHmNf5pQ
+            xoJQVMECAwEAAaOB+TCB9jAdBgNVHQ4EFgQU5HcqEpuI7kVaFEyCpMwOUByAMIow
+            gcYGA1UdIwSBvjCBu4AU5HcqEpuI7kVaFEyCpMwOUByAMIqhgZqkgZcwgZQxCzAJ
+            BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+            bmNpc2NvMRMwEQYDVQQKEwpHb29nbGUgSW5jMRcwFQYDVQQLEw5DbG91ZCBQYXR0
+            Zm9ybTEaMBgGA1UEAxMRdXBsb2FkLmFpcGxhdGZvcm0uY29tggkA1YW4bH3QTjEw
+            DAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQQFAAOCAQEAMkIUBFSAlJBkgfCP7lKb
+            MgXSXaFX03gMQqbEHCVR/mBXRW7a8G8jBgGJRF0GZVL4WlYMHwkXGHbj1SKTg==
+        </item>
+    </string-array>
+
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNV
+            BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBW
+            aWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4G
+            A1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQx
+            CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3Vu
+            dGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9p
+            ZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgC
+            ggEBANal99kKvBR5p3MkAglXpaBw8n1yB1k4s/wWnIEFmh0VfKBrHuYl0XmVf3I5
+            JDpWl7RwxCEiqj1ACLCB9PkZlW2L6s6JaY1tSCKcEm5bX3OfJNSmvveG5h8FmIe
+            4PfLF5OjO0CkYkbzCQm87r3Z8RHkCfF3OqcvJ8Hv5IfLGmVzUy5Zb5oL5VNF3zG
+            5F3S1N2tZ8Xu8OfNd3rJvXkOdkrEMg+C0oJp5AKnxnzmHkKqFNJ4kQQCxkFnCjB
+            XhUVJHVSV7m1z3kEXDN0zF0kFVh9k5r8p4DKDE2Gll3N1EHmNf5pQxoJQVMECAw
+            EAAaOBsDCBrTAdBgNVHQ4EFgQUO3Bb45PXkCsFKalWAqCKWv0nM8owDQYJKoZIhv
+            cNAQEEBQADggEBADIimGQjzEMYE4h2F5oRp8D4nDNQFsxKpnfbscU1GvVlYy6pIF
+            lHKN4eNhq3oVHhqEE6OVX/oxEIa68cPxFxwXMFMaGJeGjF3oKJRmGwMH3Gll3==
+        </item>
+    </string-array>
+
+</resources>

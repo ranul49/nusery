@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom attributes for the app theme -->
+    <attr name="colorBackground" format="reference|color"/>
+    
+    <!-- Navigation view attributes -->
+    <attr name="selectedItemId" format="reference"/>
+</resources>

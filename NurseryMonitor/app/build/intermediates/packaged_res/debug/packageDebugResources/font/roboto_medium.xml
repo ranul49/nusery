@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Downloadable Roboto Medium (weight 500) via Google Fonts provider.
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fontProviderAuthority="com.google.android.gms.fonts"
+    android:fontProviderPackage="com.google.android.gms"
+    android:fontProviderQuery="name=Roboto&amp;weight=500"
+    android:fontProviderCerts="@array/com_google_android_gms_fonts_certs" />

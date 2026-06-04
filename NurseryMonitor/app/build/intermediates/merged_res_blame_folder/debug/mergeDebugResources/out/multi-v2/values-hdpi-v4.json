@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.futa.nurserymonitor.app-mergeDebugResources-34:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ranso\\.gradle\\caches\\9.5.1\\transforms\\afd95d27cf2cf0e475126598512d6ed4\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.futa.nurserymonitor.app-mergeDebugResources-35:/layout/item_cert_log.xml",
+        "source": "com.futa.nurserymonitor.app-main-38:/layout/item_cert_log.xml"
+    },
+    {
+        "merged": "com.futa.nurserymonitor.app-mergeDebugResources-35:/layout/activity_settings.xml",
+        "source": "com.futa.nurserymonitor.app-main-38:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.futa.nurserymonitor.app-mergeDebugResources-35:/layout/activity_splash.xml",
+        "source": "com.futa.nurserymonitor.app-main-38:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.futa.nurserymonitor.app-mergeDebugResources-35:/layout/item_alert_log.xml",
+        "source": "com.futa.nurserymonitor.app-main-38:/layout/item_alert_log.xml"
+    },
+    {
+        "merged": "com.futa.nurserymonitor.app-mergeDebugResources-35:/layout/activity_history.xml",
+        "source": "com.futa.nurserymonitor.app-main-38:/layout/activity_history.xml"
+    },
+    {
+        "merged": "com.futa.nurserymonitor.app-mergeDebugResources-35:/layout/activity_cert_log.xml",
+        "source": "com.futa.nurserymonitor.app-main-38:/layout/activity_cert_log.xml"
+    },
+    {
+        "merged": "com.futa.nurserymonitor.app-mergeDebugResources-35:/layout/activity_dashboard.xml",
+        "source": "com.futa.nurserymonitor.app-main-38:/layout/activity_dashboard.xml"
+    }
+]

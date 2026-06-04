@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ================================================================
+         Dimensions
+         ================================================================ -->
+
+    <!-- Screen horizontal margin -->
+    <dimen name="screen_margin">16dp</dimen>
+    <dimen name="screen_margin_wide">24dp</dimen>
+
+    <!-- Card -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_spacing">12dp</dimen>
+
+    <!-- Status pill -->
+    <dimen name="status_pill_height">72dp</dimen>
+    <dimen name="status_pill_corner_radius">36dp</dimen>
+
+    <!-- Touch targets — min 48dp per Material spec -->
+    <dimen name="touch_target_min">48dp</dimen>
+
+    <!-- Bottom navigation -->
+    <dimen name="bottom_nav_height">60dp</dimen>
+
+    <!-- Progress bar -->
+    <dimen name="progress_bar_height">8dp</dimen>
+
+    <!-- Icon sizes -->
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+
+    <!-- Alert log dot -->
+    <dimen name="alert_dot_size">10dp</dimen>
+
+    <!-- Badge dot on nav tab -->
+    <dimen name="badge_size">8dp</dimen>
+
+    <!-- Divider -->
+    <dimen name="divider_height">1dp</dimen>
+
+    <!-- Section spacing -->
+    <dimen name="section_spacing">24dp</dimen>
+    <dimen name="item_spacing">8dp</dimen>
+
+    <!-- Typography -->
+    <dimen name="text_status_badge">24sp</dimen>
+    <dimen name="text_section_heading">18sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+
+    <!-- Elevation levels -->
+    <dimen name="elevation_0">0dp</dimen>
+    <dimen name="elevation_1">1dp</dimen>
+    <dimen name="elevation_2">2dp</dimen>
+    <dimen name="elevation_4">4dp</dimen>
+    <dimen name="elevation_8">8dp</dimen>
+
+</resources>

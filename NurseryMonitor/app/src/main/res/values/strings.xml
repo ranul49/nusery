@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name">NurseryMonitor</string>
+    <string name="app_subtitle">Smart Cassava Nursery — FUTA SEN/20/5112</string>
+
+    <!-- ================================================================
+         Status labels
+         ================================================================ -->
+    <string name="status_nominal">All Good</string>
+    <string name="status_approach">Warning</string>
+    <string name="status_breach">Alert</string>
+    <string name="status_unknown">Unknown</string>
+
+    <!-- Sensor card labels -->
+    <string name="label_ok">OK</string>
+    <string name="label_warning">WARNING</string>
+    <string name="label_breach">BREACH</string>
+    <string name="label_sensor_error">SENSOR ERROR</string>
+
+    <!-- ================================================================
+         Dashboard
+         ================================================================ -->
+    <string name="card_dht_inlet">DHT22 Inlet</string>
+    <string name="card_dht_outlet">DHT22 Outlet</string>
+    <string name="card_soil_5cm">Soil Probe 5 cm</string>
+    <string name="card_soil_10cm">Soil Probe 10 cm</string>
+
+    <string name="label_humidity">Humidity</string>
+    <string name="label_temperature">Temperature</string>
+    <string name="label_moisture">Moisture</string>
+    <string name="unit_rh">%RH</string>
+    <string name="unit_celsius">°C</string>
+    <string name="unit_vwc">%VWC</string>
+
+    <!-- Actuation banner -->
+    <string name="banner_pump_on">Misting pump ON since %s — humidity recovering</string>
+    <string name="banner_fan_on">Cooling fan ON since %s — temperature recovering</string>
+    <string name="banner_both_on">Misting pump + cooling fan ON — conditions critical</string>
+
+    <!-- Actuator toggles -->
+    <string name="toggle_pump">Pump</string>
+    <string name="toggle_fan">Fan</string>
+    <string name="toggle_ch1">Channel 1</string>
+    <string name="toggle_ch2">Channel 2</string>
+
+    <!-- Alert log -->
+    <string name="alert_log_title">Alert Log</string>
+    <string name="log_pump_manual">Pump activated manually via app</string>
+    <string name="log_fan_manual">Fan activated manually via app</string>
+    <string name="log_pump_off_manual">Pump deactivated manually via app</string>
+    <string name="log_fan_off_manual">Fan deactivated manually via app</string>
+
+    <!-- ================================================================
+         BLE offline banner
+         ================================================================ -->
+    <string name="ble_banner_title">No internet — BLE mode active</string>
+    <string name="ble_cached_data">Showing last synced data %s</string>
+    <string name="ble_signal">BLE signal: %d bars</string>
+
+    <!-- ================================================================
+         Error messages
+         ================================================================ -->
+    <string name="error_auth_failed">Authentication failed. Please re-enter your credentials.</string>
+    <string name="error_slow_connection">Slow connection — showing cached data</string>
+    <string name="error_export_failed">Export failed — check connection</string>
+    <string name="error_retry">Retry</string>
+    <string name="error_reconnect">Reconnect</string>
+    <string name="error_ble_permission">Bluetooth permission denied. Please enable it in app settings.</string>
+    <string name="error_sensor_nan">Sensor read error — waiting for valid data</string>
+
+    <!-- ================================================================
+         Toast / Snackbar messages
+         ================================================================ -->
+    <string name="toast_settings_saved">Settings saved</string>
+    <string name="toast_settings_local">Changes saved locally — ESP32 not reachable, will sync on next connection</string>
+    <string name="toast_sms_sent">Test SMS dispatched</string>
+    <string name="toast_export_success">Certification log exported — %1$d events covering %2$s</string>
+    <string name="toast_cache_age">Showing cached data from %s</string>
+
+    <!-- ================================================================
+         History screen
+         ================================================================ -->
+    <string name="tab_humidity">Humidity</string>
+    <string name="tab_temperature">Temperature</string>
+    <string name="tab_moisture">Moisture</string>
+    <string name="range_24h">24 hours</string>
+    <string name="range_7d">7 days</string>
+    <string name="range_full">Full cycle</string>
+    <string name="stat_average">Average</string>
+    <string name="stat_compliance">Compliance</string>
+    <string name="stat_breach_count">Breach Events</string>
+    <string name="stat_min_max">Min / Max</string>
+    <string name="btn_export_csv">Export CSV</string>
+
+    <!-- ================================================================
+         Certification Log
+         ================================================================ -->
+    <string name="cert_log_title">Certification Log</string>
+    <string name="filter_all">ALL</string>
+    <string name="filter_breach">BREACH</string>
+    <string name="filter_resolved">RESOLVED</string>
+    <string name="filter_manual">MANUAL</string>
+    <string name="tamper_flag">Timestamp mismatch — verify manually</string>
+    <string name="btn_export_json">Export JSON</string>
+    <string name="label_sms_sent">SMS ✓</string>
+    <string name="label_pump_on">Pump ON</string>
+    <string name="label_pump_off">Pump OFF</string>
+    <string name="label_fan_on">Fan ON</string>
+    <string name="label_fan_off">Fan OFF</string>
+    <string name="cert_summary_title">Certification Summary</string>
+    <string name="cert_compliance">Compliance</string>
+    <string name="cert_breach_events">Breach Events</string>
+    <string name="cert_actuations">Actuator Activations</string>
+    <string name="cert_water">Water / Seedling</string>
+    <string name="cert_batch_period">Batch Period</string>
+
+    <!-- ================================================================
+         Settings
+         ================================================================ -->
+    <string name="settings_title">Settings</string>
+    <string name="section_thresholds">Alert Thresholds</string>
+    <string name="threshold_humidity">Humidity Lower Limit (%RH)</string>
+    <string name="threshold_temperature">Temperature Upper Limit (°C)</string>
+    <string name="threshold_approach_margin">Approach Margin (%)</string>
+    <string name="btn_save_thresholds">Save Thresholds</string>
+    <string name="section_contact">Farmer Contact</string>
+    <string name="label_phone">Phone Number (E.164)</string>
+    <string name="btn_test_sms">Test SMS</string>
+    <string name="section_language">Alert Language</string>
+    <string name="section_device_info">Device Info</string>
+    <string name="label_node_id">Node ID</string>
+    <string name="label_firmware">Firmware Version</string>
+    <string name="label_ota">Last OTA</string>
+    <string name="label_wifi_signal">Wi-Fi Signal</string>
+    <string name="label_gsm_signal">GSM Signal Quality</string>
+    <string name="section_display">Display</string>
+    <string name="toggle_dark_mode">Dark Mode</string>
+    <string name="label_font_size">Font Size</string>
+    <string name="font_normal">Normal</string>
+    <string name="font_large">Large</string>
+    <string name="btn_logout">Logout</string>
+    <string name="dialog_logout_title">Confirm Logout</string>
+    <string name="dialog_logout_message">This will clear all saved credentials. Continue?</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <!-- ================================================================
+         Splash / Onboarding
+         ================================================================ -->
+    <string name="splash_title">Smart Cassava Nursery</string>
+    <string name="onboard_1_title">Connect Your Device</string>
+    <string name="onboard_1_body">Scan the QR code on your ESP32 node, or enter the Device ID manually.</string>
+    <string name="onboard_2_title">Register Your Number</string>
+    <string name="onboard_2_body">Add your phone number to receive SMS breach alerts directly from the tunnel node.</string>
+    <string name="onboard_3_title">Choose Alert Language</string>
+    <string name="onboard_3_body">Select the language for voice and SMS alerts: English, Yoruba, Hausa, or Igbo.</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_get_started">Get Started</string>
+    <string name="btn_scan_qr">Scan QR Code</string>
+    <string name="hint_device_id">Device ID</string>
+    <string name="hint_token">Access Token</string>
+    <string name="hint_username">Thinger.io Username</string>
+    <string name="btn_login">Connect</string>
+
+    <!-- ================================================================
+         Language options
+         ================================================================ -->
+    <string-array name="alert_languages">
+        <item>English</item>
+        <item>Yoruba</item>
+        <item>Hausa</item>
+        <item>Igbo</item>
+    </string-array>
+
+    <!-- ================================================================
+         Voice alert strings
+         ================================================================ -->
+    <string name="voice_approach">Warning. Humidity is approaching low threshold in Tunnel One.</string>
+    <string name="voice_breach">Alert. Humidity breach detected. Misting pump has been activated.</string>
+    <string name="voice_nominal">All conditions normal. Misting pump has been deactivated.</string>
+
+    <!-- ================================================================
+         Navigation labels
+         ================================================================ -->
+    <string name="nav_home">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_cert_log">Cert Log</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Accessibility -->
+    <string name="cd_status_pill">System status indicator</string>
+    <string name="cd_pump_toggle">Misting pump manual override toggle</string>
+    <string name="cd_fan_toggle">Cooling fan manual override toggle</string>
+    <string name="cd_expand_card">Expand sensor card</string>
+    <string name="cd_ble_signal">Bluetooth signal strength indicator</string>
+
+</resources>

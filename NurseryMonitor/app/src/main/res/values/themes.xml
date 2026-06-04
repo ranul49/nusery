@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ================================================================
+         Base application theme — dark mode by default
+         ================================================================ -->
+    <style name="Theme.NurseryMonitor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Brand colours -->
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryVariant">@color/brand_primary_light</item>
+        <item name="colorSecondary">@color/brand_accent</item>
+        <item name="colorSecondaryVariant">@color/brand_accent</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+
+        <!-- Surfaces -->
+        <item name="android:windowBackground">@color/surface_dark</item>
+        <item name="colorSurface">@color/surface_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:colorBackground">@color/surface_dark</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/surface_dark</item>
+        <item name="android:navigationBarColor">@color/nav_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Shape -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeSmall</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeMedium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeLarge</item>
+
+        <!-- Typography -->
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="fontFamily">@font/roboto</item>
+
+    </style>
+
+    <!-- ================================================================
+         Splash screen theme — no window content flash
+         ================================================================ -->
+    <style name="Theme.NurseryMonitor.Splash" parent="Theme.NurseryMonitor">
+        <item name="android:windowBackground">@color/surface_dark</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <!-- ================================================================
+         Shape appearances
+         ================================================================ -->
+    <style name="ShapeSmall" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeMedium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeLarge" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- ================================================================
+         Status pill styles (full-width, 200ms cross-fade transition)
+         ================================================================ -->
+    <style name="Widget.Nursery.StatusPill" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/bg_status_pill</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- ================================================================
+         Sensor card style
+         ================================================================ -->
+    <style name="Widget.Nursery.SensorCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/surface_card</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- ================================================================
+         Section heading text
+         ================================================================ -->
+    <style name="TextAppearance.Nursery.SectionHeading" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <!-- ================================================================
+         Status badge label (24sp Bold — dominant status pill text)
+         ================================================================ -->
+    <style name="TextAppearance.Nursery.StatusBadge" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <!-- ================================================================
+         Body / data values
+         ================================================================ -->
+    <style name="TextAppearance.Nursery.Body" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!-- ================================================================
+         Caption / timestamp
+         ================================================================ -->
+    <style name="TextAppearance.Nursery.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/text_disabled</item>
+    </style>
+
+    <!-- ================================================================
+         Toggle switch style
+         ================================================================ -->
+    <style name="Widget.Nursery.Toggle" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/toggle_thumb_tint</item>
+        <item name="trackTint">@color/toggle_track_tint</item>
+    </style>
+
+    <!-- ================================================================
+         Bottom navigation bar
+         ================================================================ -->
+    <style name="Widget.Nursery.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/nav_background</item>
+        <item name="itemIconTint">@color/nav_item_tint</item>
+        <item name="itemTextColor">@color/nav_item_tint</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- ================================================================
+         Material button primary
+         ================================================================ -->
+    <style name="Widget.Nursery.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/brand_accent</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- Outlined button -->
+    <style name="Widget.Nursery.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/brand_accent</item>
+        <item name="android:textColor">@color/brand_accent</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- ================================================================
+         Text field
+         ================================================================ -->
+    <style name="Widget.Nursery.TextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/brand_accent</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_disabled</item>
+    </style>
+
+</resources>

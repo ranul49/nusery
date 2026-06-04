@@ -1,0 +1,470 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.futa.nurserymonitor"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="33" />
+10
+11    <!--
+12         ============================================================
+13         Permissions
+14         ============================================================
+15    -->
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:8:5-67
+16-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:8:22-64
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:9:5-79
+17-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:9:22-76
+18    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+18-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:10:5-81
+18-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:10:22-78
+19
+20    <!-- BLE – API 31+ split permissions -->
+21    <uses-permission
+21-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:13:5-15:31
+22        android:name="android.permission.BLUETOOTH_SCAN"
+22-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:13:22-70
+23        android:usesPermissionFlags="neverForLocation" />
+23-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:14:9-55
+24    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+24-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:16:5-17:31
+24-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:16:22-73
+25    <!-- Legacy BLE for API < 31 -->
+26    <uses-permission
+26-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:19:5-20:38
+27        android:name="android.permission.BLUETOOTH"
+27-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:19:22-65
+28        android:maxSdkVersion="30" />
+28-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:20:9-35
+29    <uses-permission
+29-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:21:5-22:38
+30        android:name="android.permission.BLUETOOTH_ADMIN"
+30-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:21:22-71
+31        android:maxSdkVersion="30" />
+31-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:22:9-35
+32    <uses-permission
+32-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:23:5-24:38
+33        android:name="android.permission.ACCESS_FINE_LOCATION"
+33-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:23:22-76
+34        android:maxSdkVersion="30" />
+34-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:24:9-35
+35
+36    <!-- Push notifications – API 33+ -->
+37    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+37-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:27:5-77
+37-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:27:22-74
+38
+39    <!-- External storage – only needed below API 29 -->
+40    <uses-permission
+40-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:30:5-31:38
+41        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+41-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:30:22-78
+42        android:maxSdkVersion="28" />
+42-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:31:9-35
+43    <uses-permission
+43-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:32:5-33:38
+44        android:name="android.permission.READ_EXTERNAL_STORAGE"
+44-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:32:22-77
+45        android:maxSdkVersion="32" />
+45-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:33:9-35
+46
+47    <!-- Camera for QR scan -->
+48    <uses-permission android:name="android.permission.CAMERA" />
+48-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:36:5-65
+48-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:36:22-62
+49
+50    <uses-feature
+50-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:38:5-91
+51        android:name="android.hardware.bluetooth_le"
+51-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:38:19-63
+52        android:required="false" />
+52-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:38:64-88
+53    <uses-feature
+53-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:39:5-85
+54        android:name="android.hardware.camera"
+54-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:39:19-57
+55        android:required="false" />
+55-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:39:58-82
+56
+57    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+57-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:5-68
+57-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:24:22-65
+58    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+58-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:5-82
+58-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:26:22-79
+59
+60    <permission
+60-->[androidx.core:core:1.10.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\031eabd4b30d9ee0c5a6498d17d2788b\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+61        android:name="com.futa.nurserymonitor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+61-->[androidx.core:core:1.10.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\031eabd4b30d9ee0c5a6498d17d2788b\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+62        android:protectionLevel="signature" />
+62-->[androidx.core:core:1.10.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\031eabd4b30d9ee0c5a6498d17d2788b\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+63
+64    <uses-permission android:name="com.futa.nurserymonitor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+64-->[androidx.core:core:1.10.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\031eabd4b30d9ee0c5a6498d17d2788b\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+64-->[androidx.core:core:1.10.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\031eabd4b30d9ee0c5a6498d17d2788b\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+65
+66    <uses-feature
+66-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+67        android:name="android.hardware.camera.front"
+67-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+68        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+68-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+69    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+70    <uses-feature
+70-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+71        android:name="android.hardware.camera.autofocus"
+71-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+72        android:required="false" />
+72-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+73    <uses-feature
+73-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+74        android:name="android.hardware.camera.flash"
+74-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+75        android:required="false" />
+75-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+76    <uses-feature
+76-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+77        android:name="android.hardware.screen.landscape"
+77-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+78        android:required="false" />
+78-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+79    <uses-feature
+79-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+80        android:name="android.hardware.wifi"
+80-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+81        android:required="false" />
+81-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+82
+83    <application
+83-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:41:5-125:19
+84        android:allowBackup="true"
+84-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:42:9-35
+85        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+85-->[androidx.core:core:1.10.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\031eabd4b30d9ee0c5a6498d17d2788b\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+86        android:debuggable="true"
+87        android:extractNativeLibs="false"
+88        android:icon="@mipmap/ic_launcher"
+88-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:43:9-43
+89        android:label="@string/app_name"
+89-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:44:9-41
+90        android:roundIcon="@mipmap/ic_launcher_round"
+90-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:45:9-54
+91        android:supportsRtl="true"
+91-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:46:9-35
+92        android:theme="@style/Theme.NurseryMonitor"
+92-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:47:9-52
+93        android:usesCleartextTraffic="false" >
+93-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:48:9-45
+94
+95        <!--
+96             ============================================================
+97             Activities
+98             ============================================================
+99        -->
+100
+101
+102        <!-- Splash / Auth (launcher entry point) -->
+103        <activity
+103-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:56:9-64:20
+104            android:name="com.futa.nurserymonitor.ui.splash.SplashActivity"
+104-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:57:13-53
+105            android:exported="true"
+105-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:58:13-36
+106            android:theme="@style/Theme.NurseryMonitor.Splash" >
+106-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:59:13-63
+107            <intent-filter>
+107-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:60:13-63:29
+108                <action android:name="android.intent.action.MAIN" />
+108-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:61:17-69
+108-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:61:25-66
+109
+110                <category android:name="android.intent.category.LAUNCHER" />
+110-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:62:17-77
+110-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:62:27-74
+111            </intent-filter>
+112        </activity>
+113
+114        <!-- Dashboard (primary screen) -->
+115        <activity
+115-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:67:9-78:20
+116            android:name="com.futa.nurserymonitor.ui.dashboard.DashboardActivity"
+116-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:68:13-59
+117            android:exported="true"
+117-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:69:13-36
+118            android:launchMode="singleTop" >
+118-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:70:13-43
+119
+120            <!-- Deep link from FCM: nurserymonitor://dashboard -->
+121            <intent-filter>
+121-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:72:13-77:29
+122                <action android:name="android.intent.action.VIEW" />
+122-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:73:17-69
+122-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:73:25-66
+123
+124                <category android:name="android.intent.category.DEFAULT" />
+124-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:74:17-76
+124-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:74:27-73
+125                <category android:name="android.intent.category.BROWSABLE" />
+125-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:75:17-78
+125-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:75:27-75
+126
+127                <data
+127-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:76:17-82
+128                    android:host="dashboard"
+128-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:76:55-79
+129                    android:scheme="nurserymonitor" />
+129-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:76:23-54
+130            </intent-filter>
+131        </activity>
+132
+133        <!-- History -->
+134        <activity
+134-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:81:9-83:40
+135            android:name="com.futa.nurserymonitor.ui.history.HistoryActivity"
+135-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:82:13-55
+136            android:exported="false" />
+136-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:83:13-37
+137
+138        <!-- Certification Log -->
+139        <activity
+139-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:86:9-88:40
+140            android:name="com.futa.nurserymonitor.ui.certlog.CertLogActivity"
+140-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:87:13-55
+141            android:exported="false" />
+141-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:88:13-37
+142
+143        <!-- Settings -->
+144        <activity
+144-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:91:9-101:20
+145            android:name="com.futa.nurserymonitor.ui.settings.SettingsActivity"
+145-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:92:13-57
+146            android:exported="true" >
+146-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:93:13-36
+147
+148            <!-- Deep link from FCM: nurserymonitor://settings -->
+149            <intent-filter>
+149-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:95:13-100:29
+150                <action android:name="android.intent.action.VIEW" />
+150-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:73:17-69
+150-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:73:25-66
+151
+152                <category android:name="android.intent.category.DEFAULT" />
+152-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:74:17-76
+152-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:74:27-73
+153                <category android:name="android.intent.category.BROWSABLE" />
+153-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:75:17-78
+153-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:75:27-75
+154
+155                <data
+155-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:76:17-82
+156                    android:host="settings"
+156-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:76:55-79
+157                    android:scheme="nurserymonitor" />
+157-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:76:23-54
+158            </intent-filter>
+159        </activity>
+160
+161        <!--
+162             ============================================================
+163             Firebase FCM Service
+164             ============================================================
+165        -->
+166        <service
+166-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:106:9-112:19
+167            android:name="com.futa.nurserymonitor.fcm.NurseryFCMService"
+167-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:107:13-50
+168            android:exported="false" >
+168-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:108:13-37
+169            <intent-filter>
+169-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:109:13-111:29
+170                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+170-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:110:17-78
+170-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:110:25-75
+171            </intent-filter>
+172        </service>
+173
+174        <!-- FCM default notification channel -->
+175        <meta-data
+175-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:115:9-117:46
+176            android:name="com.google.firebase.messaging.default_notification_channel_id"
+176-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:116:13-89
+177            android:value="nursery_alerts" />
+177-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:117:13-43
+178        <meta-data
+178-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:118:9-120:60
+179            android:name="com.google.firebase.messaging.default_notification_icon"
+179-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:119:13-83
+180            android:resource="@drawable/ic_notification" />
+180-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:120:13-57
+181        <meta-data
+181-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:121:9-123:55
+182            android:name="com.google.firebase.messaging.default_notification_color"
+182-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:122:13-84
+183            android:resource="@color/brand_primary" />
+183-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:123:13-52
+184
+185        <receiver
+185-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:29:9-36:20
+186            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+186-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:30:13-78
+187            android:exported="true"
+187-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:31:13-36
+188            android:permission="com.google.android.c2dm.permission.SEND" >
+188-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:32:13-73
+189            <intent-filter>
+189-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:33:13-35:29
+190                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+190-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:34:17-81
+190-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:34:25-78
+191            </intent-filter>
+192        </receiver>
+193        <!--
+194             FirebaseMessagingService performs security checks at runtime,
+195             but set to not exported to explicitly avoid allowing another app to call it.
+196        -->
+197        <service
+197-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:42:9-49:19
+198            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+198-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:43:13-82
+199            android:directBootAware="true"
+199-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:44:13-43
+200            android:exported="false" >
+200-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:45:13-37
+201            <intent-filter android:priority="-500" >
+201-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:109:13-111:29
+202                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+202-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:110:17-78
+202-->C:\Users\ranso\New folder\NurseryMonitor\app\src\main\AndroidManifest.xml:110:25-75
+203            </intent-filter>
+204        </service>
+205        <service
+205-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:50:9-56:19
+206            android:name="com.google.firebase.components.ComponentDiscoveryService"
+206-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:51:13-84
+207            android:directBootAware="true"
+207-->[com.google.firebase:firebase-common:20.3.3] C:\Users\ranso\.gradle\caches\9.5.1\transforms\553d3447443ec584d02211ff424e8110\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:34:13-43
+208            android:exported="false" >
+208-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:52:13-37
+209            <meta-data
+209-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:53:13-55:85
+210                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+210-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:54:17-119
+211                android:value="com.google.firebase.components.ComponentRegistrar" />
+211-->[com.google.firebase:firebase-messaging:23.2.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\58f63c255ddba43e62d2ad3704e66da0\transformed\jetified-firebase-messaging-23.2.1\AndroidManifest.xml:55:17-82
+212            <meta-data
+212-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\ranso\.gradle\caches\9.5.1\transforms\49d36ff3fc9add039cbc33a36ad003c2\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+213                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+213-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\ranso\.gradle\caches\9.5.1\transforms\49d36ff3fc9add039cbc33a36ad003c2\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+214                android:value="com.google.firebase.components.ComponentRegistrar" />
+214-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\ranso\.gradle\caches\9.5.1\transforms\49d36ff3fc9add039cbc33a36ad003c2\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+215            <meta-data
+215-->[com.google.firebase:firebase-installations:17.1.4] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2d636e25a704d26d192580d601e9b4ec\transformed\jetified-firebase-installations-17.1.4\AndroidManifest.xml:15:13-17:85
+216                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+216-->[com.google.firebase:firebase-installations:17.1.4] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2d636e25a704d26d192580d601e9b4ec\transformed\jetified-firebase-installations-17.1.4\AndroidManifest.xml:16:17-127
+217                android:value="com.google.firebase.components.ComponentRegistrar" />
+217-->[com.google.firebase:firebase-installations:17.1.4] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2d636e25a704d26d192580d601e9b4ec\transformed\jetified-firebase-installations-17.1.4\AndroidManifest.xml:17:17-82
+218        </service>
+219
+220        <activity
+220-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\a5a61f76cf63ea4532c880f9da11f419\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+221            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+221-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\a5a61f76cf63ea4532c880f9da11f419\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+222            android:exported="false"
+222-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\a5a61f76cf63ea4532c880f9da11f419\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+223            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+223-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\a5a61f76cf63ea4532c880f9da11f419\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+224
+225        <provider
+225-->[com.google.firebase:firebase-common:20.3.3] C:\Users\ranso\.gradle\caches\9.5.1\transforms\553d3447443ec584d02211ff424e8110\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:25:9-30:39
+226            android:name="com.google.firebase.provider.FirebaseInitProvider"
+226-->[com.google.firebase:firebase-common:20.3.3] C:\Users\ranso\.gradle\caches\9.5.1\transforms\553d3447443ec584d02211ff424e8110\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:26:13-77
+227            android:authorities="com.futa.nurserymonitor.firebaseinitprovider"
+227-->[com.google.firebase:firebase-common:20.3.3] C:\Users\ranso\.gradle\caches\9.5.1\transforms\553d3447443ec584d02211ff424e8110\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:27:13-72
+228            android:directBootAware="true"
+228-->[com.google.firebase:firebase-common:20.3.3] C:\Users\ranso\.gradle\caches\9.5.1\transforms\553d3447443ec584d02211ff424e8110\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:28:13-43
+229            android:exported="false"
+229-->[com.google.firebase:firebase-common:20.3.3] C:\Users\ranso\.gradle\caches\9.5.1\transforms\553d3447443ec584d02211ff424e8110\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:29:13-37
+230            android:initOrder="100" />
+230-->[com.google.firebase:firebase-common:20.3.3] C:\Users\ranso\.gradle\caches\9.5.1\transforms\553d3447443ec584d02211ff424e8110\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:30:13-36
+231
+232        <meta-data
+232-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\56f83dfbc6745bdeeef13c58066a2aed\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+233            android:name="com.google.android.gms.version"
+233-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\56f83dfbc6745bdeeef13c58066a2aed\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+234            android:value="@integer/google_play_services_version" />
+234-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\56f83dfbc6745bdeeef13c58066a2aed\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+235
+236        <provider
+236-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\5dcbad8f87f64ac981bc3fdf5bc3686a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+237            android:name="androidx.startup.InitializationProvider"
+237-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\5dcbad8f87f64ac981bc3fdf5bc3686a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+238            android:authorities="com.futa.nurserymonitor.androidx-startup"
+238-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\5dcbad8f87f64ac981bc3fdf5bc3686a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+239            android:exported="false" >
+239-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\5dcbad8f87f64ac981bc3fdf5bc3686a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+240            <meta-data
+240-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\5dcbad8f87f64ac981bc3fdf5bc3686a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+241                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+241-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\5dcbad8f87f64ac981bc3fdf5bc3686a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+242                android:value="androidx.startup" />
+242-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\5dcbad8f87f64ac981bc3fdf5bc3686a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+243            <meta-data
+243-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\75d9c39da324157257386f86ad3aa983\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+244                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+244-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\75d9c39da324157257386f86ad3aa983\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+245                android:value="androidx.startup" />
+245-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\ranso\.gradle\caches\9.5.1\transforms\75d9c39da324157257386f86ad3aa983\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+246        </provider>
+247
+248        <activity
+248-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+249            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+249-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+250            android:clearTaskOnLaunch="true"
+250-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+251            android:screenOrientation="sensorLandscape"
+251-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+252            android:stateNotNeeded="true"
+252-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+253            android:theme="@style/zxing_CaptureTheme"
+253-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+254            android:windowSoftInputMode="stateAlwaysHidden" />
+254-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ranso\.gradle\caches\9.5.1\transforms\f7503d777602c87efacb3cd0040e24a9\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+255
+256        <service
+256-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\00aa9856d424e330d81a6de527c08a28\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+257            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+257-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\00aa9856d424e330d81a6de527c08a28\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+258            android:exported="false" >
+258-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\00aa9856d424e330d81a6de527c08a28\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+259            <meta-data
+259-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\00aa9856d424e330d81a6de527c08a28\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+260                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+260-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\00aa9856d424e330d81a6de527c08a28\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+261                android:value="cct" />
+261-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\00aa9856d424e330d81a6de527c08a28\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+262        </service>
+263        <service
+263-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2af6ac9b25405a925e8fdb3cbd9bf517\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+264            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+264-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2af6ac9b25405a925e8fdb3cbd9bf517\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+265            android:exported="false"
+265-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2af6ac9b25405a925e8fdb3cbd9bf517\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+266            android:permission="android.permission.BIND_JOB_SERVICE" >
+266-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2af6ac9b25405a925e8fdb3cbd9bf517\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+267        </service>
+268
+269        <receiver
+269-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2af6ac9b25405a925e8fdb3cbd9bf517\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+270            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+270-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2af6ac9b25405a925e8fdb3cbd9bf517\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+271            android:exported="false" />
+271-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\ranso\.gradle\caches\9.5.1\transforms\2af6ac9b25405a925e8fdb3cbd9bf517\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+272    </application>
+273
+274</manifest>
