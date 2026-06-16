@@ -58,6 +58,8 @@ export interface RawEventLogEntry {
   pump_state: boolean;
   fan_state: boolean;
   sms_sent: boolean;
+  /** Optional: if the backend ever computes this server-side, use it; otherwise computed client-side */
+  tamper_flag?: boolean;
 }
 
 /** Node configuration stored locally / sent to device */

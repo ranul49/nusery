@@ -42,7 +42,7 @@ public class AlertLogAdapter extends RecyclerView.Adapter<AlertLogAdapter.AlertV
     private final List<EventLogEntry> items;
 
     // Tracks which row is expanded (-1 = none)
-    private int expandedPosition = RecyclerView.NO_POSITION;
+    private long expandedPosition = RecyclerView.NO_ID;
 
     // Display-format for the timestamps shown in the list
     private static final SimpleDateFormat SDF_DISPLAY;
@@ -137,10 +137,10 @@ public class AlertLogAdapter extends RecyclerView.Adapter<AlertLogAdapter.AlertV
         holder.layoutExpanded.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
         holder.itemView.setOnClickListener(v -> {
-            int previousExpanded = expandedPosition;
-            expandedPosition = isExpanded ? RecyclerView.NO_POSITION : position;
-            if (previousExpanded != RecyclerView.NO_POSITION) {
-                notifyItemChanged(previousExpanded);
+            long previousExpanded = expandedPosition;
+            expandedPosition = isExpanded ? RecyclerView.NO_ID : position;
+            if (previousExpanded != RecyclerView.NO_ID) {
+                notifyItemChanged((int) previousExpanded);
             }
             notifyItemChanged(position);
         });

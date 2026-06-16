@@ -33,9 +33,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.futa.nurserymonitor.util.DownloadExportUtil;
 
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -284,19 +283,7 @@ public class HistoryActivity extends AppCompatActivity {
             }
 
             String filename = "nursery_history_" + currentRange + ".csv";
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                ContentValues cv = new ContentValues();
-                cv.put(MediaStore.Downloads.DISPLAY_NAME, filename);
-                cv.put(MediaStore.Downloads.MIME_TYPE, "text/csv");
-                cv.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
-                Uri uri = getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, cv);
-                if (uri != null) {
-                    try (OutputStream os = getContentResolver().openOutputStream(uri);
-                         OutputStreamWriter w = new OutputStreamWriter(os)) {
-                        w.write(sb.toString());
-                    }
-                }
-            }
+            DownloadExportUtil.writeTextToDownloads(this, filename, sb.toString(), "text/csv");
             Toast.makeText(this, "Exported to Downloads/" + filename, Toast.LENGTH_LONG).show();
 
         } catch (Exception e) {

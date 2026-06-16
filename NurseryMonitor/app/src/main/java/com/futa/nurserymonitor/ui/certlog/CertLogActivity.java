@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.media.MediaScannerConnection;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,9 +30,8 @@ import com.futa.nurserymonitor.ui.settings.SettingsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.chip.ChipGroup;
 import com.google.gson.Gson;
+import com.futa.nurserymonitor.util.DownloadExportUtil;
 
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -158,24 +158,14 @@ public class CertLogActivity extends AppCompatActivity {
             }
 
             String filename = "certification_log." + format;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                ContentValues cv = new ContentValues();
-                cv.put(MediaStore.Downloads.DISPLAY_NAME, filename);
-                cv.put(MediaStore.Downloads.MIME_TYPE, mime);
-                cv.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
-                Uri uri = getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, cv);
-                if (uri != null) {
-                    try (OutputStream os = getContentResolver().openOutputStream(uri);
-                         OutputStreamWriter w = new OutputStreamWriter(os)) {
-                        w.write(content);
-                    }
-                    // Share sheet
-                    Intent share = new Intent(Intent.ACTION_SEND);
-                    share.setType(mime);
-                    share.putExtra(Intent.EXTRA_STREAM, uri);
-                    share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    startActivity(Intent.createChooser(share, "Share certification log"));
-                }
+            Uri uri = DownloadExportUtil.writeTextToDownloads(this, filename, content, mime);
+
+            if (uri != null) {
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType(mime);
+                share.putExtra(Intent.EXTRA_STREAM, uri);
+                share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                startActivity(Intent.createChooser(share, "Share certification log"));
             }
             Toast.makeText(this, String.format(getString(R.string.toast_export_success),
                     allEntries.size(), "current cycle"), Toast.LENGTH_LONG).show();
